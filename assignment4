@@ -1,0 +1,66 @@
+1)
+import java.util.*;
+import java.lang.*;
+class Parent
+{
+    Parent()
+    {
+     System.out.println("Parent constructor called!");   
+    }
+    Parent(int a)
+    {
+      this();
+    }
+}
+class  DefaultCons
+{
+    public static void main(String [] aa)
+    {
+       Parent pp=new Parent(10);
+    }
+}
+**************************
+2)
+import java.util.*;
+import java.lang.*;
+final class Parent
+{
+    Parent()
+    {
+     System.out.println("This is final class :)");   
+    }
+}
+class  Fin
+{
+    public static void main(String [] args)
+    {
+    Parent p=new Parent();
+    }
+}
+**************************************
+3)
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class prnt
+{
+  int a=10;
+  public void prt()
+  {
+    System.out.println(" Function is called from parent class " +a);
+  }
+}
+class Child extends prnt
+{
+  Child()
+  {
+    super.prt();
+  }
+}
+class inv
+{
+  public static void main(String [] args)
+  {
+    Child cc=new Child();
+  }
+}
